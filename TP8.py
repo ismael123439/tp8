@@ -2,21 +2,24 @@ import mysql.connector
 
 def connect_to_database():
     return mysql.connector.connect(
-        host="basu8auzorc59y9pilys-mysql.services.clever-cloud.com",
-        user="upjjlfvlgzsbwixm",
-        password="tZSdTQUnSWzhB7kRw1B4",
-        database="basu8auzorc59y9pilys"
+        host="borgutwop9xvo57oqrfa-mysql.services.clever-cloud.com",
+        user="umrk43qubdfxq6ga",
+        password="nLxs4jFFmdwVIwWYDBgd",
+        database="borgutwop9xvo57oqrfa"
     )
 
+def insertar_usuario(cursor, nombre, email):
+    sql = "INSERT INTO usuarios (nombre, email) VALUES (%s, %s)"
+    valores = (nombre, email)
+    cursor.execute(sql, valores)
+
 def main():
+    db_connection = None
     try:
-        # Conectarse a la base de datos
         db_connection = connect_to_database()
         
         if db_connection.is_connected():
             print("Conexión exitosa a la base de datos en Clever Cloud")
-            
-            # Realizar las operaciones que necesites aquí
             
     except mysql.connector.Error as err:
         print("Error al conectarse a la base de datos: {}".format(err))
