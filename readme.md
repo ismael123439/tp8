@@ -7,7 +7,7 @@ Este repositorio contiene el código de una aplicación Python que se conecta a 
 1. Clona este repositorio en tu máquina local:
 
 ```bash
-git clone https://github.com/tu_usuario/nombre_repositorio.git
+git clone https://github.com/ismael123439/tp8.git
 ```
 
 2. Instala las dependencias necesarias. Recomiendo usar un entorno virtual:
